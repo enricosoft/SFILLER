@@ -1,0 +1,93 @@
+﻿.sfillerModal {
+            width: 100%;
+            height: 100%;
+            background: rgba(41,41,41,0.4);
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+
+            .sfillerModal .content {
+                width: 86%;
+                height: 86%;
+                padding: 40px;
+                background-color: #ffffff;
+                border-radius: 3px;
+                /* Absolute Positioning and Stretching Method */
+                margin: auto;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+
+                .sfillerModal .content div {
+                    margin: 0px;
+                    padding: 0px;
+                    color: #808080;
+                    font-size: 26px;
+                    font-family: Arial;
+                    display: inline-block; /* Important because using this the text occupy space! */
+                }
+
+                    .sfillerModal .content div ul {
+                        margin: 0px;
+                        padding: 0px;
+                        list-style-position: inside;
+                    }
+
+                    .sfillerModal .content div li {
+                        margin: 0px;
+                        padding: 0px;
+                    }
+
+
+div.mic-container{
+			display: inline-block;
+			width:90px;
+			height:90px;
+			position: absolute;
+            top:6px;
+            right:6px;
+		}
+		
+		.mic-container div.mic{			
+			background:url(mic.png) no-repeat center center #FF0000;												
+			width: 70px;
+			height: 70px;
+			border-radius: 70px;
+			z-index:2;			
+		}
+		
+		.mic-container div.pulse{
+			background:#eeeeee;
+			width: 45px;
+			height: 45px;
+			-webkit-animation: pulsate 1s ease-out;
+			-webkit-animation-iteration-count: infinite; 
+		}
+		
+		.center{
+			position:absolute;
+			top:0px;
+			left:0px;
+			right:0px;
+			bottom:0px;
+			margin:auto;		
+		}
+						
+		@-webkit-keyframes pulsate {
+			0% {
+				-webkit-transform: scale(1,1);
+				border-radius: 45px;							
+			}			
+			50% {
+				-webkit-transform: scale(2,2);				
+				border-radius: 90px;				
+			}
+			100% {
+				-webkit-transform: scale(1,1);				
+				border-radius: 45px;
+			}
+		}

@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Sfiller | Fill webform using Speech</title>
+
+    <link href="sfiller.css" rel="stylesheet" type="text/css" />
+    
+    <script src="sfiller.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        function pageLoad() {
+            // Init type 1: you can pass the container selector and the plugins gets all the input\select controls contained in that have "speech-text" attribute
+            // Init type 2: You can pass the class assigned to each input\select control that have "speech-text" attribute
+            // Init type 3: you can pass directly the id of the only item in the form that have "speech-text" attribute
+
+            // You can immediatly start to fill the form (the init function is chainable) o do that after (for example onclick on something)
+
+            var plugin = sfiller.init('#myForm').startFill('it', 5);
+
+        }
+
+        function send() {
+            alert('sent!');
+        }
+        
+    </script>
+
+</head>
+<body onload="pageLoad()">
+
+    <!-- simple test form -->
+    <div id="myForm">
+        Name:
+        <input id="txtName" type="text" speech-text="Name" />
+        <br />
+        Surname:
+        <input id="txtSurname" type="text" speech-text="Surname" />
+        <br />
+        Gender:
+        <select id="cmbGender" speech-text="Gender">
+            <option value="">-- Choose --</option>
+            <option value="M">Male</option>
+            <option value="F">Female</option>
+        </select>
+        <br />
+        Newsletter:
+        <input id="chkNewsletter" type="checkbox" speech-text="Subscribe to newsletter?" />
+        <br />
+        Donate:
+        <label for="radioD1">0</label><input id="radioD1" type="radio" name="donate" value="0" speech-text="Do you want to donate something?" />
+        <label for="radioD2">2</label><input id="radioD2" type="radio" name="donate" value="2" />
+        <label for="radioD3">5</label><input id="radioD3" type="radio" name="donate" value="5" />
+        <br />
+        <input type="button" value="SEND" onclick="send()" speech-text="Do you wanna save?" />
+    </div>
+
+
+</body>
+</html>
